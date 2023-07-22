@@ -1,0 +1,14 @@
+version: "3.5"
+services:
+  notebooks:
+    container_name: notebooks-demo-retrieval-augmented-generation
+    build: 
+      context: .
+      dockerfile: Dockerfile
+    command: ["jupyter", "notebook", "--port=8888", "--no-browser", "--ip=0.0.0.0", "--allow-root", "--NotebookApp.token=${NOTEBOOK_TOKEN}"]
+    volumes:
+      - ../:/src
+    ports:
+      - 8888:8888
+    env_file:
+      - .env

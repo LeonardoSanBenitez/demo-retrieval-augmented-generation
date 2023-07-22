@@ -1,0 +1,10 @@
+numpy
+pandas
+pydantic
+python-dotenv
+requests
+openai
+
+langchain==0.0.239
+pypdf==3.12.2
+chromadb==0.4.2
